@@ -26,4 +26,3 @@ Develope a software application for a school management system. Design the class
 - Names
 - Timings
 - Assigning user ids.
-These scenarios showcase how OOP concepts can be applied to solve real-world problems effectively in Java.
