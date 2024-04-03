@@ -8,16 +8,8 @@ You're designing a banking system. Utilize interfaces and abstract classes to re
 - Pin Number
 - etc
 
-## Question 2: Game Character Hierarchy
 
-### Scenario:
-Design different types of characters such as warriors, mages, and archers. Each character type has specific abilities and behaviors. Use inheritance and abstract classes to design the character hierarchy while ensuring that each character type can implement its unique abilities.
-### Hint:
-- Character will be the Parent class
-- Bahaviours are methods.
-- abilities could be variables.
-
-## Question 3: School Management System
+## Question 2: School Management System
 
 ### Scenario:
 Develope a software application for a school management system. Design the classes representing different entities such as students, teachers, and courses. Common methods or functionalitis must be inherited while allowing for specific implementations for each entity type.
@@ -25,4 +17,4 @@ Develope a software application for a school management system. Design the class
 - Department
 - Names
 - Timings
-- Assigning user ids.
+- Assigning user ids. 
