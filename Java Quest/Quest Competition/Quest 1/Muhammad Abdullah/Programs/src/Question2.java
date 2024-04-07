@@ -20,7 +20,7 @@ class Person
     }
 }
 
-// Student class representing students
+// Student class
 class Student extends Person 
 {
     private int studentId;
@@ -109,7 +109,8 @@ class Course
     private String name;
     private String code;
 
-    public Course(String name, String code) {
+    public Course(String name, String code) 
+    {
         this.name = name;
         this.code = code;
     }
@@ -125,29 +126,29 @@ class Course
     }
 }
 
-// Main class to test the implementation
+// Main class Start
 public class Question2 
 {
     public static void main(String[] args) {
-        Student student1 = new Student("Muhammad Abdullah", 18, "D.I.Khan", 1001, 5);
-        Student student2 = new Student("Alice Smith", 17, "456 Oak St", 1002, 5);
+        Student s1 = new Student("Muhammad Abdullah", 19, "D.I.Khan", 1001, 6);
+        Student s2 = new Student("Waheed Akhtar", 20, "Gujrat", 1002, 6);
 
-        Teacher teacher1 = new Teacher("Mr. Johnson", 35, "789 Elm St", "Mathematics", 3);
-        Teacher teacher2 = new Teacher("Ms. Garcia", 40, "987 Pine St", "Science", 3);
+        Teacher t1 = new Teacher("Mr. Muhammad Faraz", 28, "Faislabad", "Mathematics", 3);
+        Teacher t2 = new Teacher("Ms. Mahjabeen Sami", 25, "Aukara", "Science", 3);
 
-        Course mathCourse = new Course("Mathematics", "MATH101");
+        Course mathCourse = new Course("Mathematics", "MTH101");
         Course scienceCourse = new Course("Science", "SCI101");
 
-        student1.enrollCourse(mathCourse);
-        student2.enrollCourse(scienceCourse);
+        s1.enrollCourse(mathCourse);
+        s2.enrollCourse(scienceCourse);
 
-        teacher1.teachCourse(mathCourse);
-        teacher2.teachCourse(scienceCourse);
+        t1.teachCourse(mathCourse);
+        t2.teachCourse(scienceCourse);
 
-        student1.displayInfo();
-        student1.displayCourses();
+        s1.displayInfo();
+        s1.displayCourses();
 
-        teacher1.displayInfo();
-        teacher1.displayCoursesTaught();
+        t1.displayInfo();
+        t1.displayCoursesTaught();
     }
 }
