@@ -1,25 +1,26 @@
-class A {
+class One {
     int x;
 
-    A() {
+    One() {
         this(5);
-        System.out.println("A default constructor");
+        System.out.print("D Constructor");
     }
 
-    A(int x) {
+    One(int x) {
         this.x = x;
-        System.out.println("A parameterized constructor");
+        System.out.println("P Constructor");
     }
 }
 
-class B extends A {
-    B() {
-        System.out.println("B default constructor");
+class Two extends One {
+    Two() {
+        super(5);
+        System.out.println("D2 constructor");
     }
 }
 
 public class Output2 {
     public static void main(String[] args) {
-        B obj = new B();
+        Sec obj = new Sec();
     }
 }
