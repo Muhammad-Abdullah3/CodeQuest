@@ -1,31 +1,31 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 class Candidate
 {
-	static String[] candidateList;
-	static int[] votes;
-	static int candNo = 0;
+	static ArrayList<String> candidateList = new ArrayList<>();
+	static ArrayList<Integer> votes = new ArrayList<>();
 	public void addCandidate(String name)
 	{
-		candidateList[candNo] = name;
-		votes[candNo] = 0;
-		candNo ++;
+		candidateList.add(name);
+		votes.add(0);
 	}
 	public void castVote(String name)
 	{
-		for(int i=0;i<candidateList.length;i++)
+		for(int i=0;i<candidateList.size();i++)
 		{
-			if(name==candidateList[i])
+			if(name==candidateList.get(i))
 			{
-				votes[i]++;
+				int temp = votes.get(i)+1;
+				votes.set(i, temp);
 			}
 		}
 	}
 	public void printResult()
 	{
 		System.out.println("Candidate\t\tVotes");
-		for(int i=0;i<candidateList.length;i++)
+		for(int i=0;i<candidateList.size();i++)
 		{  
-			System.out.println(candidateList[i]+"\t\t"+votes[i]);
+			System.out.println(candidateList.get(i)+"\t\t"+votes.get(i));
 		}
 	}
 }
@@ -60,5 +60,4 @@ public class Midlong {
 		}while(ch=='y'||ch=='Y');
 		System.out.println("Program terminated.");
 	}
-
 }
