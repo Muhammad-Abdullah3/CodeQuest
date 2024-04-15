@@ -3,18 +3,14 @@ class Signup
 {
 	int choice = 0;
 	Scanner inp = new Scanner(System.in);
-	public void candSignUp()
+	public void candLogIn()
 	{
 		Candidate can = new Candidate();
-		can.addCandidate();
-		can.setSymbol();
 		System.out.println("Congratulations You have Signed up as a Candidate.");
 	}
-	public void voterSignUp()
+	public void voterLogIn()
 	{
 		Voter vo = new Voter();
-		vo.addVoter();
-		System.out.println("Congratulations You have Signed up as a Voter.");
 	}
 	public void menu()
 	{
@@ -23,16 +19,15 @@ class Signup
 		switch(choice)
 		{
 		case 1:
-			candSignUp();
+			candLogIn();
 			break;
 		case 2:
-			voterSignUp();
+			voterLogIn();
 			break;
 		default:
 			System.out.println("Invalid Choice please chose again.");
 			Signup sign = new Signup();
 			sign.menu();
-			
 		}
 	}
 }
