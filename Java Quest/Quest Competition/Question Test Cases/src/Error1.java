@@ -1,7 +1,8 @@
 class Animal {
     String name;
+
     Animal(String name) {
-        name = name;
+        this.name = name;
     }
 
     void display() {
@@ -13,12 +14,12 @@ class Horse extends Animal {
     String breed;
 
     Horse(String name, String breed) {
-        this.breed = breed;
         super(name);
+        this.breed = breed;
     }
 
     void display() {
-        System.out.println("Name: " + name +, " Breed: " + breed);
+        System.out.println("Name: " + name + ", Breed: " + breed);
     }
 }
 
@@ -37,8 +38,8 @@ class Cat extends Animal {
 
 public class Error1 {
     public static void main(String[] args) {
-        Animal animals = new Animal("Horse");
-        Horse aniHor = new Horse("Buddy", "Labrador");
+        Animal[] animals = new Animal[2];
+        animals[0] = new Horse("Buddy", "Labrador");
         animals[1] = new Cat("Kitty", "White");
 
         for (int i = 0; i < animals.length; i++) {
