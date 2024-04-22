@@ -9,12 +9,18 @@ class Signup
 		can.addCandidate();
 		can.setSymbol();
 		System.out.println("Congratulations You have Signed up as a Candidate.");
+		System.out.println("Your Candidate Id is: "+Candidate.candNum+100);
+		System.out.println("Remember this cand Id for loging into your candidate account instantly.");
+		System.out.println("Your voter Id is: "+Voter.voterNum+1000);
+		System.out.println("Remember this voter Id for loging into your voter account instantly.");
 	}
 	public void voterSignUp()
 	{
 		Voter vo = new Voter();
 		vo.addVoter();
 		System.out.println("Congratulations You have Signed up as a Voter.");
+		System.out.println("Your voter Id is: "+Voter.voterNum+1000);
+		System.out.println("Remember this voter Id for loging into your voter account instantly.");
 	}
 	public void menu()
 	{
@@ -32,7 +38,6 @@ class Signup
 			System.out.println("Invalid Choice please chose again.");
 			Signup sign = new Signup();
 			sign.menu();
-			
 		}
 	}
 }

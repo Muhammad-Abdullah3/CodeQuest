@@ -1,11 +1,13 @@
 import java.util.Scanner;
-class LogIn 
+class Login 
 {
 	int choice = 0; String searchName,searchCnic;
 	Scanner inp = new Scanner(System.in);
 	public void candLogIn()
 	{
-		Candidate can = new Candidate();
+		//Candidate can = new Candidate();
+		System.out.println("Enter Your Voter Id for instant Login: ");
+		System.out.println("Try a different way: ");
 		System.out.println("Enter Your Name: ");
 		searchName = inp.nextLine();
 		searchCnic = inp.nextLine();
@@ -20,7 +22,7 @@ class LogIn
 	}
 	public void voterLogIn()
 	{
-		Voter vo = new Voter();
+		//Voter vo = new Voter();
 		System.out.println("Enter Your Name: ");
 		searchName = inp.nextLine();
 		searchCnic = inp.nextLine();
@@ -34,8 +36,8 @@ class LogIn
 	}
 	public void LogInmenu()
 	{
-		System.out.println("Press 1 for Signing Up as a Candidate:");
-		System.out.println("Press 2 for Signing Up as a Voter:");
+		System.out.println("Press 1 for Loging in as a Candidate:");
+		System.out.println("Press 2 for Loging in as a Voter:");
 		switch(choice)
 		{
 		case 1:
