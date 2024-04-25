@@ -116,7 +116,7 @@ class User implements ContactFun
 	}
 	public void displayMenu()
 	{
-		System.out.println("1.	Add new Contact.\r\n"+ "\r2. Delete Contact. \r\n"
+		System.out.println("1.	Add new Contact.\r\n"+ "\r2.	Delete Contact. \r\n"
 				+ "3.	Update contact information.\r\n"+ "4.	search for contacts by name.\r\n"
 				+"5.	display all contacts.\r\n"+ "6.	and exit the program\r\n");
 	}
