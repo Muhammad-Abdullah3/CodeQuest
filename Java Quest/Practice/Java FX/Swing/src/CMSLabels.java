@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.border.Border;
 
-public class Labels {
+public class CMSLabels {
 
     public static void main(String[] args) {
         // JLabel = a GUI display area for a string of text, an image, or both 
@@ -14,11 +14,11 @@ public class Labels {
         Border border = BorderFactory.createLineBorder(new Color(0, 255, 255), 3);
 
         JLabel label = new JLabel(); //create a label 
-        label.setText("Your Contact"); //set text of label 
+        label.setText("Add Contacts"); //set text of label 
         label.setIcon(image1); // set Icon of Label 
         label.setHorizontalTextPosition(JLabel.CENTER); //set text LEFT,CENTER, RIGHT of imageicon 
         label.setVerticalTextPosition(JLabel.BOTTOM); //set text TOP,CENTER, BOTTOM of imageicon 
-        label.setFont(new Font("MV Boli", Font.PLAIN, 100)); //set font of text 
+        label.setFont(new Font("Arial", Font.PLAIN, 10)); //set font of text 
         label.setIconTextGap(-25); //set gap of text to image 
         label.setBackground(new Color(255, 255, 255)); //set background color 
         label.setOpaque(true); //display background color 
@@ -90,7 +90,7 @@ public class Labels {
         label5.setVerticalTextPosition(JLabel.BOTTOM); //set text TOP,CENTER, BOTTOM of imageicon 
         label5.setFont(new Font("MV Boli", Font.PLAIN, 100)); //set font of text 
         label5.setIconTextGap(-25); //set gap of text to image 
-        label5.setBackground(new Color(0, 25, 25)); //set background color 
+        label5.setBackground(new Color(252, 255, 255)); //set background color 
         label5.setOpaque(true); //display background color 
         label5.setBorder(border); //sets border of label5 (not image+text) 
         label5.setVerticalAlignment(JLabel.CENTER); //set vertical position of icon+text within label5 
