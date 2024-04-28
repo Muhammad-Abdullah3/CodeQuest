@@ -54,7 +54,7 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(elemFound==false)
+		if(!(elemFound))
 		{
 			System.out.println("Contact Not Found");
 		}
@@ -83,7 +83,7 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(elemFound==false)
+		if(!(elemFound))
 		{
 			System.out.println("Contact Not Found");
 		}
@@ -105,7 +105,7 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(elemFound==false)
+		if(!(elemFound))
 		{
 			System.out.println("Contact Not Found");
 		}
