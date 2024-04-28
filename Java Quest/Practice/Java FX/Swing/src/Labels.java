@@ -39,16 +39,15 @@ public class Labels {
         label1.setBorder(border); //sets border of label1 (not image+text) 
         label1.setVerticalAlignment(JLabel.CENTER); //set vertical position of icon+text within label1 
         label1.setHorizontalAlignment(JLabel.RIGHT); //set horizontal position of icon+text within label1
-        label1.setBounds(100, 100, 250, 250); //set x,y position within frame as well as dimensions 
-
+        label1.setBounds(100, 100, 250, 250); //set x,y position within frame as well as dimensions
+		
         JFrame frame = new JFrame(); 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         frame.setSize(1000, 720); 
-        frame.setLayout(new java.awt.GridLayout(1, 2)); //set layout to GridLayout with one row and two columns
+        frame.setLayout(new java.awt.GridLayout(2, 3)); //set layout to GridLayout with one row and two columns
         frame.setVisible(true);  
         frame.add(label); 
         frame.add(label1); 
-
         frame.pack(); 
     } 
 }
