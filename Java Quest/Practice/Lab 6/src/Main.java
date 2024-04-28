@@ -38,12 +38,12 @@ class User implements ContactFun
 		    String p = inp.nextLine();
 		    Contacts.address.add(p);
 	}
-	public void deleteContact(String name)
+	public void deleteContact(String nameOf)
 	{
 		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
-			if(Contacts.name.get(i)==name)
+			if(Contacts.name.get(i).equals(nameOf))
 			{
 				Contacts.name.remove(i);
 				Contacts.phoneNum.remove(i);
@@ -59,12 +59,12 @@ class User implements ContactFun
 			System.out.println("Contact Not Found");
 		}
 	}
-	public void updateContact(String name)
+	public void updateContact(String nameOf)
 	{
 		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
-			if(Contacts.name.get(i)==name)
+			if(Contacts.name.get(i).equals(nameOf))
 			{
 				System.out.println("Enter the new name of Contact: ");
 				String m=inp.nextLine();
@@ -88,12 +88,12 @@ class User implements ContactFun
 			System.out.println("Contact Not Found");
 		}
 	}
-	public void searchContact(String name)
+	public void searchContact(String nameOf)
 	{
 		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
-			if(Contacts.name.get(i)==name)
+			if(Contacts.name.get(i).equals(nameOf))
 			{
 				System.out.print("Contact found.");
 				System.out.println("\t\t\t\t\t\t---------Contact Details--------------: ");
@@ -112,7 +112,7 @@ class User implements ContactFun
 	}
 	public void displayContacts()
 	{
-		System.out.println("Name\t\t\t\tPhone Num\t\t\t\tEmail\t\t\tAddress\t\t|\t ");
+		System.out.println("Name\t\t\t\tPhone Num\t\t\t\tEmail\t\t\tAddress");
 		System.out.println("----------------------------------------------------------------------------------------------------");
 		
 		for(int i=0;i<Contacts.name.size();i++)
