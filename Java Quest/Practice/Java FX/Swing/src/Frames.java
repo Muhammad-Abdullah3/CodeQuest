@@ -6,7 +6,7 @@ public class Frames
 {
 	public static void main(String[] args)
 	{
-		/* J Frame is a Window
+		//J Frame is a Window
 		JFrame frame = new JFrame(); // Creating a JFrame Object
 		frame.setTitle("Contact Management");//4th Step
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//5th Step
@@ -17,7 +17,8 @@ public class Frames
 		ImageIcon image1 = new ImageIcon("C:\\Users\\Muhammad Abdullah\\Desktop\\download.png");// 7
 		frame.setIconImage(image1.getImage());
 		frame.getContentPane().setBackground(new Color(0,0,0));
-		*/
+		
 		SubFrame myFrame = new SubFrame();
+	
 	}
 }
