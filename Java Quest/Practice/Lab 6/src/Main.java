@@ -43,7 +43,7 @@ class User implements ContactFun
 		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
-			if(Contacts.name.get(i).equals(nameOf))
+			if(Contacts.name.get(i).equals(nameOf)) //name[i].equals(nameOf)
 			{
 				Contacts.name.remove(i);
 				Contacts.phoneNum.remove(i);
@@ -54,7 +54,7 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(!(elemFound))
+		if(elemFound==false)
 		{
 			System.out.println("Contact Not Found");
 		}
