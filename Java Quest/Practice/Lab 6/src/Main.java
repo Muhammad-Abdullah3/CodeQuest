@@ -22,21 +22,25 @@ class User implements ContactFun
 	Scanner inp = new Scanner(System.in);
 	public void addContact()
 	{
-		System.out.println("Enter the name of new Contact: ");
-		String m=inp.nextLine();
-		Contacts.name.add(m);
-		System.out.println("Enter the Phone number of new Contact: ");
-		String n=inp.nextLine();
-		Contacts.phoneNum.add(n);
-		System.out.println("Enter the email of new Contact: ");
-		String o=inp.nextLine();
-		Contacts.email.add(o);
-		System.out.println("Enter the address of new Contact: ");
-		String p=inp.nextLine();
-		Contacts.address.add(p);
+		 System.out.println("Enter the name of new Contact: ");
+		    String m = inp.nextLine();
+		    Contacts.name.add(m);
+		    
+		    System.out.println("Enter the Phone number of new Contact: ");
+		    String n = inp.nextLine();
+		    Contacts.phoneNum.add(n);
+		    
+		    System.out.println("Enter the email of new Contact: ");
+		    String o = inp.nextLine();
+		    Contacts.email.add(o);
+		    
+		    System.out.println("Enter the address of new Contact: ");
+		    String p = inp.nextLine();
+		    Contacts.address.add(p);
 	}
 	public void deleteContact(String name)
 	{
+		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
 			if(Contacts.name.get(i)==name)
@@ -50,13 +54,14 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(!(elemFound))
+		if(elemFound==false)
 		{
 			System.out.println("Contact Not Found");
 		}
 	}
 	public void updateContact(String name)
 	{
+		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
 			if(Contacts.name.get(i)==name)
@@ -78,13 +83,14 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(!(elemFound))
+		if(elemFound==false)
 		{
 			System.out.println("Contact Not Found");
 		}
 	}
 	public void searchContact(String name)
 	{
+		elemFound = false;
 		for(int i=0;i<Contacts.name.size();i++)
 		{
 			if(Contacts.name.get(i)==name)
@@ -99,19 +105,19 @@ class User implements ContactFun
 				break;
 			}
 		}
-		if(!(elemFound))
+		if(elemFound==false)
 		{
 			System.out.println("Contact Not Found");
 		}
 	}
 	public void displayContacts()
 	{
-		System.out.println("Name\t\t|\tPhone Num\t\t|\tEmail\t\t|\tAddress\t\t|\t ");
+		System.out.println("Name\t\t\t\tPhone Num\t\t\t\tEmail\t\t\tAddress\t\t|\t ");
 		System.out.println("----------------------------------------------------------------------------------------------------");
 		
 		for(int i=0;i<Contacts.name.size();i++)
 		{
-			System.out.println(Contacts.name.get(i)+"\t\t|\t"+Contacts.phoneNum.get(i)+"\t\t|\t"+Contacts.email.get(i)+"\t\t|\t"+Contacts.address.get(i)+"\t\t|\t");
+			System.out.println(Contacts.name.get(i)+"\t\t\t"+Contacts.phoneNum.get(i)+"\t\t\t"+Contacts.email.get(i)+"\t\t\t"+Contacts.address.get(i)+"\t\t\t");
 		}
 	}
 	public void displayMenu()
@@ -126,6 +132,7 @@ class User implements ContactFun
 		displayMenu();
 		System.out.println("Enter your choice:");
 		int choice = inp.nextInt();
+		inp.nextLine();
 		switch(choice)
 		{
 		case 1:
