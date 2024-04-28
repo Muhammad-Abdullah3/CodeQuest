@@ -15,6 +15,7 @@ public class Labels {
 
         JLabel label = new JLabel(); //create a label 
         label.setText("Your Contact"); //set text of label 
+        label.setForeground(new Color(255,0,0));
         label.setIcon(image1); // set Icon of Label 
         label.setHorizontalTextPosition(JLabel.CENTER); //set text LEFT,CENTER, RIGHT of imageicon 
         label.setVerticalTextPosition(JLabel.BOTTOM); //set text TOP,CENTER, BOTTOM of imageicon 

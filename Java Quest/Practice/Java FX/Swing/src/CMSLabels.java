@@ -11,6 +11,7 @@ public class CMSLabels {
     public static void main(String[] args) {
         // JLabel = a GUI display area for a string of text, an image, or both 
         ImageIcon image1 = new ImageIcon("Contact Icon.png");
+        //ImageIcon newimg = image1.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
         Border border = BorderFactory.createLineBorder(new Color(0, 255, 255), 3);
 
         JLabel label = new JLabel(); //create a label 
