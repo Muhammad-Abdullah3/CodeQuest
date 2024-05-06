@@ -14,7 +14,7 @@ public class CMSLabels {
         //ImageIcon newimg = image1.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
         Border border = BorderFactory.createLineBorder(new Color(0, 255, 255), 3);
 
-        JLabel label = new JLabel(); //create a label 
+        JLabel label = new JLabel(); //create a label
         label.setText("Add Contacts"); //set text of label 
         label.setIcon(image1); // set Icon of Label 
         label.setHorizontalTextPosition(JLabel.CENTER); //set text LEFT,CENTER, RIGHT of imageicon 

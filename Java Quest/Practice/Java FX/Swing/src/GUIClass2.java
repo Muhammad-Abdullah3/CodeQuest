@@ -1,5 +1,6 @@
 /*
   import javax.swing.*;    
+
  
 public class GUIClass2 {  
 public static void main(String[] args) {  
