@@ -45,9 +45,9 @@ public class ActionListener
         JButton b3 = new JButton("Add");
         b3.setBounds(30,450,20,50);
         frame.add(b3);
-        JButton b3 = new JButton("Add");
+        JButton b4 = new JButton("Add");
         b3.setBounds(30,450,20,50);
-        frame.add(b3);
+        frame.add(b4);
 
     }
 }
