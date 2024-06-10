@@ -4,14 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.SQLException;
 
-public class StoreHomePage extends JFrame 
-{
-
+public class StoreHomePage extends JFrame {
     private JButton placeOrderButton;
-    private JButton addProductButton;
+    private JButton productManagementButton;
     private Connection conn;
 
     public StoreHomePage() {
@@ -19,42 +16,42 @@ public class StoreHomePage extends JFrame
         setLayout(new FlowLayout());
 
         placeOrderButton = new JButton("Place Order");
-        addProductButton = new JButton("Add Product");
+        productManagementButton = new JButton("Manage Products");
 
         add(placeOrderButton);
-        add(addProductButton);
+        add(productManagementButton);
 
         placeOrderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Code to place order goes here
-                // You can create a new JFrame or dialog to take order details
+                // Implement place order logic here
+                PlaceOrderFrame orderFrame = new PlaceOrderFrame(conn);
             }
         });
 
-        addProductButton.addActionListener(new ActionListener() {
+        productManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Code to add product goes here
-                // You can create a new JFrame or dialog to take product details
+                try {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerydb", "root", "root123");
+                    System.out.println("Connected to database");
+
+                    ProductManagementFrame productFrame = new ProductManagementFrame(conn);
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(StoreHomePage.this, "Error connecting to database: " + ex.getMessage());
+                } catch (ClassNotFoundException ex) {
+                    JOptionPane.showMessageDialog(StoreHomePage.this, "JDBC Driver not found: " + ex.getMessage());
+                }
             }
         });
 
-        // Establish database connection
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerydb", "root", "root123");
-            System.out.println("Connected to database");
-        } catch (Exception ex) {
-            System.out.println("Error connecting to database: " + ex.getMessage());
-        }
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
-    public static void main(String[] args)
-    {
-                StoreHomePage homepage = new StoreHomePage();
-                homepage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                homepage.setSize(400, 300);
-                homepage.setVisible(true);
+    public static void main(String[] args) {
+        new StoreHomePage();
     }
 }
