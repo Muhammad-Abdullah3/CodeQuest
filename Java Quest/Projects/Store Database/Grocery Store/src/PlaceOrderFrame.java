@@ -34,8 +34,8 @@ public class PlaceOrderFrame extends JFrame {
                     String customerName = customerNameField.getText();
                     String orderDate = orderDateField.getText();
                     double totalAmount = Double.parseDouble(totalAmountField.getText());
-
-                    PreparedStatement pstmt = conn.prepareStatement("INSERT INTO orders (customer_name, order_date, total_amount) VALUES (?, ?, ?)");
+                    String sqlStat = "INSERT INTO orders (cutomer_name, order_date, total_amount) VALUES (?, ?, ?)";
+                    PreparedStatement pstmt = conn.prepareStatement(sqlStat);
                     pstmt.setString(1, customerName);
                     pstmt.setString(2, orderDate);
                     pstmt.setDouble(3, totalAmount);
