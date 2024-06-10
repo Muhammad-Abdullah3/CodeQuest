@@ -67,7 +67,7 @@ public class  Main1
         yearBox.setBounds(200, 270, 80, 30);
         f.add(yearBox);
          
-        /*monthBox.addActionListener(new ActionListener() 
+        monthBox.addActionListener(new ActionListener() 
         {
             @Override
             public void actionPerformed(ActionEvent e) 
@@ -180,10 +180,10 @@ public class  Main1
             	}
                 Main1.perdate = returnDate(date);
             }
-        });*/
+        });
         
-        String[] dates = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"};
-        JComboBox dateBox = new JComboBox(dates);
+        //String[] dates = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"};
+        JComboBox dateBox = new JComboBox(Main1.perdate);
         dateBox.setBounds(290, 270, 80, 30);
         f.add(dateBox);
         
