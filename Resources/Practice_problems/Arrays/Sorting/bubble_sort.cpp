@@ -9,6 +9,7 @@ int main()
     {
         cin>>arr[i];
     }
+    
     //Sorting
     for(int j=0;j<size;j++)
     {
